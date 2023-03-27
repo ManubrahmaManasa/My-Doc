@@ -28,7 +28,7 @@ public class RecyclerHospitalAdapter extends RecyclerView.Adapter<RecyclerHospit
     @Override
     public RecyclerHospitalAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View myView = inflater.inflate(R.layout.item_view, parent, false);
+        View myView = inflater.inflate(R.layout.item_view_hsptl, parent, false);
         return new ViewHolder(myView);
     }
 
@@ -48,7 +48,7 @@ public class RecyclerHospitalAdapter extends RecyclerView.Adapter<RecyclerHospit
         public ViewHolder(View itemView) {
             super(itemView);
 
-            nameTextView = itemView.findViewById(R.id.rvText);
+            nameTextView = itemView.findViewById(R.id.tvHospital);
 
         }
     }

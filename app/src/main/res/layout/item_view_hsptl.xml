@@ -33,7 +33,7 @@
             </ImageView>
 
             <TextView
-                android:id="@+id/hsptltv"
+                android:id="@+id/tvHospital"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

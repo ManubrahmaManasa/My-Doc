@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.devedroy.mydoc.data.fillDepartmentData
 import com.devedroy.mydoc.data.fillHospitalData
 import com.devedroy.mydoc.data.fillSurgeriesData
@@ -55,21 +56,21 @@ class HomePageActivity : AppCompatActivity() {
         val mSurgeryData: List<Surgery> = fillSurgeriesData()
         val mRecyclerSurgeryAdapter = SurgeryAdapter(mSurgeryData)
         binding.rvSurgeries.adapter = mRecyclerSurgeryAdapter
-        binding.rvSurgeries.layoutManager = LinearLayoutManager(this)
+        binding.rvSurgeries.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
     }
 
     private fun configureDepartmentsAdapter() {
         val myDataSet: List<Department> = fillDepartmentData()
         val mRecyclerDepartmentAdapter = DepartmentAdapter(myDataSet)
         binding.rvTests.adapter = mRecyclerDepartmentAdapter
-        binding.rvTests.layoutManager = LinearLayoutManager(this)
+        binding.rvTests.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
     }
 
     private fun configureTestsAdapter() {
         val myDataSet: List<Test> = fillTestData()
         val mRecyclerTestAdapter = TestAdapter(myDataSet)
         binding.rvTests.adapter = mRecyclerTestAdapter
-        binding.rvTests.layoutManager = LinearLayoutManager(this)
+        binding.rvTests.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
     }
 
@@ -80,7 +81,7 @@ class HomePageActivity : AppCompatActivity() {
             this, myListData
         )
         binding.rvHospitals.adapter = mRecyclerHospitalAdapter
-        binding.rvHospitals.layoutManager = LinearLayoutManager(this)
+        binding.rvHospitals.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
     }
 
     @SuppressLint("MissingPermission", "SetTextI18n")

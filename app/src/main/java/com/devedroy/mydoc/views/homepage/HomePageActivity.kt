@@ -62,8 +62,8 @@ class HomePageActivity : AppCompatActivity() {
     private fun configureDepartmentsAdapter() {
         val myDataSet: List<Department> = fillDepartmentData()
         val mRecyclerDepartmentAdapter = DepartmentAdapter(myDataSet)
-        binding.rvTests.adapter = mRecyclerDepartmentAdapter
-        binding.rvTests.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvDepartments.adapter = mRecyclerDepartmentAdapter
+        binding.rvDepartments.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
     }
 
     private fun configureTestsAdapter() {

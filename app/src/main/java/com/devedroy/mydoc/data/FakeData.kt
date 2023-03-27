@@ -15,14 +15,26 @@ fun fillHospitalData(): List<Hospital> {
 
 
 
-fun fillSurgeriesData(): List<Surgery> = listOf(
-    Surgery("Heart Operation", 300000f)
-)
+fun fillSurgeriesData(): List<Surgery> {
+    var surgeries  = mutableListOf(Surgery("Heart Operation", 300000f))
+    for (i in 0..100) {
+        surgeries.add(Surgery("Heart Operation", 300000f))
+    }
+    return surgeries
+}
 
-fun fillDepartmentData(): List<Department> = listOf(
-    Department("Dentist")
-)
+fun fillDepartmentData(): List<Department> {
+    var departments  = mutableListOf(Department("Dentist"))
+    for (i in 0..100) {
+        departments.add(Department("Dentist"))
+    }
+    return departments
+}
 
-fun fillTestData(): List<Test> = listOf(
-    Test("PV/PF", 200f)
-)
+fun fillTestData(): List<Test> {
+    var tests  = mutableListOf(Test("PV/PF", 200f))
+    for (i in 0..100) {
+        tests.add(Test("PV/PF", 200f))
+    }
+    return tests
+}

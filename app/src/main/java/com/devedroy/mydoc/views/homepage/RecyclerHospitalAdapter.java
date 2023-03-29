@@ -6,10 +6,12 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.devedroy.mydoc.data.local.Hospital;
 import com.devedroy.mydoc.databinding.ItemViewHospitalBinding;
+import com.devedroy.mydoc.views.dialogs.CustomDialogFragment;
 
 import java.util.List;
 
@@ -53,7 +55,9 @@ public class RecyclerHospitalAdapter extends RecyclerView.Adapter<RecyclerHospit
             String rating = String.valueOf(hospital.getRating());
             binding.tvRating.setText(rating);
             binding.getRoot().setOnClickListener(view -> {
-                Toast.makeText(context, "Hello Item", Toast.LENGTH_SHORT).show();
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                CustomDialogFragment customDialogFragment = new CustomDialogFragment();
+//                customDialogFragment.show(fragmentManager, "Custom Dialog");
             });
         }
     }

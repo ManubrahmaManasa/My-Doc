@@ -9,7 +9,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="200dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:elevation="20dp"
             android:orientation="horizontal"
-            android:background="@drawable/bghs">
+            android:background="@drawable/hsptlbg">
 
             <ImageView
                 android:id="@+id/imghsptl"
@@ -40,14 +40,16 @@
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="25dp"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#0A1B78"/>
             <TextView
                 android:id="@+id/Location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
                 android:layout_below="@id/tvHospital"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:textColor="#0A1B78"/>
             <TextView
                 android:id="@+id/Rating"
                 android:layout_width="match_parent"
@@ -56,6 +58,7 @@
                 android:layout_below="@id/Location"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:textColor="#0A1B78"
                 />
 
 

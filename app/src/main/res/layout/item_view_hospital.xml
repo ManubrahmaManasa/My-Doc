@@ -42,18 +42,18 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
-                android:id="@+id/Location"
+                android:id="@+id/tvLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
                 android:layout_below="@id/tvHospital"
                 android:textSize="15sp"/>
             <TextView
-                android:id="@+id/Rating"
+                android:id="@+id/tvRating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
-                android:layout_below="@id/Location"
+                android:layout_below="@id/tvLocation"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 />

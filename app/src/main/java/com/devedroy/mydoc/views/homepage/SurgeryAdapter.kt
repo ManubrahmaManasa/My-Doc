@@ -13,7 +13,7 @@ class SurgeryAdapter(
 ) : RecyclerView.Adapter<SurgeryAdapter.SurgeryViewHolder>() {
 
     class SurgeryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textViewName: TextView = itemView.findViewById(R.id.name)
+        val textViewName: TextView = itemView.findViewById(R.id.surgname)
         val textViewCost: TextView = itemView.findViewById(R.id.cost)
     }
 

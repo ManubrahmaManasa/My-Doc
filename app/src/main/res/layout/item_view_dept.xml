@@ -9,36 +9,30 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="200dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         app:cardUseCompatPadding="true">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:elevation="20dp">
+            android:elevation="20dp"
+            android:background="@drawable/dentistbg">
 
-            <ImageView
-                android:id="@+id/ivDept"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="40dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/dept" />
+
 
             <TextView
                 android:id="@+id/depttv"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text="Dentist"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="45dp"
                 android:textSize="20sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+                android:textStyle="bold"
+                android:textColor="#0A1B78"/>
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
 

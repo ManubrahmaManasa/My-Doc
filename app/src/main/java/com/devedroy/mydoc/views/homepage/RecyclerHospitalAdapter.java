@@ -36,7 +36,8 @@ public class RecyclerHospitalAdapter extends RecyclerView.Adapter<RecyclerHospit
     public void onBindViewHolder(@NonNull RecyclerHospitalAdapter.ViewHolder holder, int position) {
         holder.nameTextView.setText(mDemoData.get(position).getName());
         holder.nameloc.setText(mDemoData.get(position).getAddress());
-        //holder.rating.setText(mDemoData.get(position).getRating());
+        String rating = String.valueOf(mDemoData.get(position).getRating());
+        holder.rating.setText(rating);
     }
 
     @Override
@@ -45,18 +46,14 @@ public class RecyclerHospitalAdapter extends RecyclerView.Adapter<RecyclerHospit
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView nameTextView,nameloc;
-        //public TextView rating;
-
+        public TextView nameTextView, nameloc;
+        public TextView rating;
 
         public ViewHolder(View itemView) {
             super(itemView);
-
             nameTextView = itemView.findViewById(R.id.tvHospital);
-            nameloc=itemView.findViewById(R.id.Location);
-            //rating=itemView.findViewById(R.id.Rating);
-
-
+            nameloc = itemView.findViewById(R.id.Location);
+            rating = itemView.findViewById(R.id.Rating);
         }
     }
 }

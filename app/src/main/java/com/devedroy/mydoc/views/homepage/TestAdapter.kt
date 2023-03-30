@@ -12,8 +12,8 @@ class TestAdapter(
     private val dataset: List<Test>
 ) : RecyclerView.Adapter<TestAdapter.TestViewModel>() {
     class TestViewModel(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textViewName: TextView = itemView.findViewById(R.id.name)
-        val textViewCost: TextView = itemView.findViewById(R.id.cost)
+        val textViewName: TextView = itemView.findViewById(R.id.testname)
+        val textViewCost: TextView = itemView.findViewById(R.id.testcost)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TestViewModel {

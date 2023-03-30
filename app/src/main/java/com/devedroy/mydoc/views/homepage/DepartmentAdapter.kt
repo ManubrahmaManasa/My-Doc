@@ -14,8 +14,8 @@ class DepartmentAdapter(
 ) : RecyclerView.Adapter<DepartmentAdapter.DepartmentViewHolder>() {
     class DepartmentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.depttv)
-        val imageView = itemView.findViewById<ImageView>(R.id.ivDept)
-    }
+
+            }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DepartmentViewHolder {
         val adapterLayout =
@@ -30,6 +30,6 @@ class DepartmentAdapter(
     override fun onBindViewHolder(holder: DepartmentViewHolder, position: Int) {
         val item = dataset[position]
         holder.textView.text = item.name
-        holder.imageView.setImageResource(R.drawable.dept)
+
     }
 }

@@ -2,17 +2,17 @@ package com.devedroy.mydoc.views.homepage;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.devedroy.mydoc.R;
 import com.devedroy.mydoc.data.local.Hospital;
+import com.devedroy.mydoc.databinding.ItemViewHospitalBinding;
+import com.devedroy.mydoc.views.dialogs.CustomDialogFragment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerHospitalAdapter extends RecyclerView.Adapter<RecyclerHospitalAdapter.ViewHolder> {
@@ -27,17 +27,13 @@ public class RecyclerHospitalAdapter extends RecyclerView.Adapter<RecyclerHospit
     @NonNull
     @Override
     public RecyclerHospitalAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View myView = inflater.inflate(R.layout.item_view_hsptl, parent, false);
-        return new ViewHolder(myView);
+        ItemViewHospitalBinding binding = ItemViewHospitalBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+        return new ViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerHospitalAdapter.ViewHolder holder, int position) {
-        holder.nameTextView.setText(mDemoData.get(position).getName());
-        holder.nameloc.setText(mDemoData.get(position).getAddress());
-        String rating = String.valueOf(mDemoData.get(position).getRating());
-        holder.rating.setText(rating);
+        holder.bind(mDemoData.get(position));
     }
 
     @Override
@@ -46,14 +42,23 @@ public class RecyclerHospitalAdapter extends RecyclerView.Adapter<RecyclerHospit
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView nameTextView, nameloc;
-        public TextView rating;
+        private ItemViewHospitalBinding binding;
 
-        public ViewHolder(View itemView) {
-            super(itemView);
-            nameTextView = itemView.findViewById(R.id.tvHospital);
-            nameloc = itemView.findViewById(R.id.Location);
-            rating = itemView.findViewById(R.id.Rating);
+        public ViewHolder(ItemViewHospitalBinding binding) {
+            super(binding.getRoot());
+            this.binding = binding;
+        }
+
+        public void bind(Hospital hospital) {
+            binding.tvHospital.setText(hospital.getName());
+            binding.tvLocation.setText(hospital.getAddress());
+            String rating = String.valueOf(hospital.getRating());
+            binding.tvRating.setText(rating);
+            binding.getRoot().setOnClickListener(view -> {
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                CustomDialogFragment customDialogFragment = new CustomDialogFragment();
+//                customDialogFragment.show(fragmentManager, "Custom Dialog");
+            });
         }
     }
 }

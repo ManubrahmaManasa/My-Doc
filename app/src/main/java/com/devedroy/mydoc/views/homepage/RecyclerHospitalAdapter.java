@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.devedroy.mydoc.R;
 import com.devedroy.mydoc.data.local.Hospital;
 import com.devedroy.mydoc.databinding.ItemViewHospitalBinding;
-import com.devedroy.mydoc.views.dialogs.CustomDialogFragment;
 
 import java.util.List;
 

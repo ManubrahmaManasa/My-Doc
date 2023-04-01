@@ -1,17 +1,20 @@
 package com.devedroy.mydoc.views.homepage;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.devedroy.mydoc.R;
 import com.devedroy.mydoc.data.local.Hospital;
 import com.devedroy.mydoc.databinding.ItemViewHospitalBinding;
-import com.devedroy.mydoc.views.dialogs.CustomDialogFragment;
 
 import java.util.List;
 
@@ -55,9 +58,14 @@ public class RecyclerHospitalAdapter extends RecyclerView.Adapter<RecyclerHospit
             String rating = String.valueOf(hospital.getRating());
             binding.tvRating.setText(rating);
             binding.getRoot().setOnClickListener(view -> {
-//                FragmentManager fragmentManager = getSupportFragmentManager();
-//                CustomDialogFragment customDialogFragment = new CustomDialogFragment();
-//                customDialogFragment.show(fragmentManager, "Custom Dialog");
+                Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.custom_dialog_layout);
+                dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                TextView test = dialog.findViewById(R.id.dialog_text);
+                test.setOnClickListener(view1 -> {
+                    Toast.makeText(context, "clicked on dialog text view", Toast.LENGTH_SHORT).show();
+                });
+                dialog.show();
             });
         }
     }
